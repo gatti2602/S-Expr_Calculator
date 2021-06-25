@@ -1,6 +1,10 @@
 S-Expression Calculator
 =======================
-This is my implementation of an S-Expression calculator in python
+This is my implementation of an S-Expression calculator in python. 
+
+To run execute `src/main.py operation`
+
+Note: Created for **Python 3**, small changes needed in code to run it in Python 2.
 
 ## Features
 ### 1. Support for operations
