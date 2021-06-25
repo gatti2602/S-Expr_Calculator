@@ -11,10 +11,18 @@ def resolve(expression: str):
     if expression[0] != "(" or expression[-1] != ")":
         raise Exception("Invalid Expression")
 
-    tokens = expression.replace("(", "( ").replace(")", " )").split()
+    tokens = _parse_tokens(expression)
 
     value, _ = _resolve_expression(tokens[1:])
     return value
+
+
+def _parse_tokens(expression: str):
+    """
+    Parses the tokens that makes the S-Expression.
+    Note: The performance of this function is not O(1) (At least O(n²))
+    """
+    return expression.replace("(", "( ").replace(")", " )").split()
 
 
 def _resolve_expression(tokens, pos=0):
